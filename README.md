@@ -14,7 +14,7 @@ This website can be used to view weather conditions for a city of your choice. T
 
 [Link to Weather Dashboard webpage](https://crcarmen23.github.io/weather-dashboard/)
 
-![screenshot](assets/screenshot.png)
+![screenshot](assets/images/screenshot.png)
 
 
 ## Credits
