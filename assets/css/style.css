@@ -56,5 +56,19 @@ width: 30%;
 }
 
 #forecast {
-    color: blue;
+    display: flex;
+    
+}
+
+.card {
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(88, 88, 132);
+    color: white;
+}
+
+.container {
+    display: flex;
 }

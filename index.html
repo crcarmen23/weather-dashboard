@@ -16,21 +16,29 @@
   </header>
 
   <main>
-      <div class="city-search">
-        <h3>Search For a City:</h3>
-        <form id="search-form">
-          <input id="city" type="text"/>
-          <button type="submit" class="btn">Search</button>
-        </form>
-      </div>
+    <div class="city-search">
+      <h3>Search For a City:</h3>
+      <form id="search-form">
+        <input id="city" type="text" />
+        <button type="submit" class="btn">Search</button>
+      </form>
+    </div>
 
-      <div id="current-weather">
-<h2 id="name"></h2>
+    <div id="current-weather">
+      <h2 id="name"></h2>
+    </div>
+    <div class="container">
+      <div>
+        <h3>History</h3>
+        <button>City</button>
       </div>
-<div id="forecast">
-
-</div>
+      <div id="forecast">
+      </div>
+    </div>
   </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 
   <script src="./assets/js/script.js"></script>
 </body>
