@@ -32,12 +32,12 @@ var getWeatherData = function (city) {
             console.log(data);
             document.getElementById('current-weather').innerHTML = ''
             var card = document.createElement('div')
-            card.classList.add('card')
+            card.classList.add('card-current')
             var cityName = document.createElement('h2')
-            cityName.innerText = data.name
+            cityName.innerText = 'Current Weather in ' + data.name
             card.append(cityName)
             var date = document.createElement('h4')
-            date.textContent = dayjs.unix(data.dt).format('MMM, DD hh:mm a')
+            date.textContent = '(' + dayjs.unix(data.dt).format('MMM DD, hh:mm a') + ')'
             card.append(date)
             var icon = document.createElement('img')
             icon.src = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '.png'
@@ -83,8 +83,11 @@ function getForecast(latitude, longitude) {
             for (var i = 0; i < data.list.length; i++) {
                 if (data.list[i].dt_txt.includes('12:00:00')) {
                     console.log(data.list[i])
+                    // var text = document.createElement('h2')
+                    // text.textContent= '5-Day Forecast:'
+                    // document.append(text)
                     var card = document.createElement('div')
-                    card.classList.add('card')
+                    card.classList.add('card-forecast')
                     var date = document.createElement('h4')
                     date.textContent = dayjs(data.list[i].dt_txt).format('MMM DD, hh:mm a')
                     card.append(date)
