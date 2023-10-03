@@ -12,7 +12,7 @@ N/A
 
 This website can be used to view weather conditions for a city of your choice. The website will display current weather conditions as well as a 5-day forecast for the chosen city. 
 
-[Link to Weather Dashboard webpage](https://crcarmen23.github.io/nyc-quiz/)
+[Link to Weather Dashboard webpage](https://crcarmen23.github.io/weather-dashboard/)
 
 ![screenshot](assets/screenshot.png)
 
