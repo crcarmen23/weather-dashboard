@@ -10,7 +10,7 @@ font-size: 16px;
 }
 
 header {
-    background-color: blue;
+    background-color: rgb(100, 100, 186);
     color: white;
     text-align: center;
     margin: 0;
@@ -22,7 +22,7 @@ header h1 {
 }
 
 h3 {
-color: blue;
+color: rgb(49, 49, 62);
 line-height: 1.25;
 margin: 0;
 font-weight: 700;
@@ -37,6 +37,7 @@ border: solid 4px;
 color: rgb(70, 70, 127);
 border-radius: 10px;
 text-align: center;
+padding: 10px;
 width: 30%;
 }
 
@@ -44,10 +45,11 @@ width: 30%;
     padding: 5px 5px;
     width: 95%;
     display: block;
-    background-color: blue;
+    background-color: rgb(100, 100, 186);
     color: white;
     display: inline;
     border-radius: 10px;
+    margin-top: 5px;
 }
 
 .btn:hover {
@@ -65,7 +67,7 @@ width: 30%;
     margin: 5px;
     border-radius: 10px;
     padding: 5px;
-    background-color: rgb(88, 88, 132);
+    background-color: rgb(72, 105, 203);
     color: white;
 }
 

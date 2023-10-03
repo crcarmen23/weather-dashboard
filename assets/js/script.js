@@ -32,6 +32,7 @@ var getWeatherData = function (city) {
             console.log(data);
             document.getElementById('current-weather').innerHTML= ''
             var card = document.createElement('div')
+            card.classList.add('card')
             var cityName = document.createElement('h3')
             cityName.innerText= data.name
             card.append(cityName)
@@ -59,7 +60,6 @@ var getWeatherData = function (city) {
 
 function displayWeather(data) {
     console.log(data)
-    // document.getElementById('name').textContent= data.name
 }
 
 function getForecast (latitude, longitude) {
