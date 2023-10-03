@@ -62,10 +62,10 @@ function getForecast (latitude, longitude) {
             if (data.list[i].dt_txt.includes('12:00:00')){
                 console.log(data.list[i])
                 var date = document.createElement('h4')
-                date.textContent= 'date: ' + data.list[i].dt_txt
+                date.textContent=data.list[i].dt_txt
                 document.getElementById('forecast').append(date)
                 var temp =document.createElement('h4')
-                temp.textContent= 'temp: ' + data.list[i].main.temp
+                temp.textContent= 'Temp: ' + data.list[i].main.temp + '°F'
                 document.getElementById('forecast').append(temp)
             }
         }
