@@ -95,3 +95,14 @@ margin-left: 20px;
     display: flex;
 float: right;
 }
+
+button {
+    display: block;
+    text-align: center;
+    background-color: rgb(108, 160, 244);
+    border-radius: 13px;
+    font-size: 20px;
+    color: white;
+    padding: 3px;
+    margin: 0 auto;
+}
