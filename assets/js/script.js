@@ -1,6 +1,7 @@
 var citySearchForm = document.querySelector('#search-form')
 var searchText = document.querySelector('#city')
 var apiKey = 'cd405cde850f10f65e79988b0936ac58'
+var searchHistory = JSON.parse(localStorage.getItem('previousSearch')) || []
 
 var citySubmit = function (event) {
     event.preventDefault();
@@ -11,7 +12,6 @@ var citySubmit = function (event) {
         getWeatherData(city);
 
         searchText.value = '';
-
     }
 }
 
@@ -30,6 +30,14 @@ var getWeatherData = function (city) {
         })
         .then(function (data) {
             console.log(data);
+            if (!searchHistory.includes(data.name)) {
+                searchHistory.push(data.name)
+                localStorage.setItem('previousSearch', JSON.stringify(searchHistory))
+                var button = document.createElement('button')
+                button.textContent = data.name
+                button.onclick = buttonClick
+                document.getElementById('previous-searches').append(button)
+            }
             document.getElementById('current-weather').innerHTML = ''
             var card = document.createElement('div')
             card.classList.add('card-current')
@@ -80,12 +88,10 @@ function getForecast(latitude, longitude) {
         })
         .then(function (data) {
             console.log(data);
+            document.getElementById('forecast').innerHTML = ''
             for (var i = 0; i < data.list.length; i++) {
                 if (data.list[i].dt_txt.includes('12:00:00')) {
                     console.log(data.list[i])
-                    // var text = document.createElement('h2')
-                    // text.textContent= '5-Day Forecast:'
-                    // document.append(text)
                     var card = document.createElement('div')
                     card.classList.add('card-forecast')
                     var date = document.createElement('h4')
@@ -113,3 +119,16 @@ function getForecast(latitude, longitude) {
 }
 
 citySearchForm.addEventListener('submit', citySubmit)
+
+function buttonClick() {
+    console.log(this)
+    var city = this.textContent
+    getWeatherData(city)
+}
+
+for(var i=0; i<searchHistory.length; i++) {
+    var button = document.createElement('button')
+                button.textContent = searchHistory[i]
+                button.onclick = buttonClick
+                document.getElementById('previous-searches').append(button)
+}
